@@ -1,0 +1,40 @@
+{
+  "name": "code-levels",
+  "displayName": "code-levels",
+  "description": "Adds levels and xp for programming languages!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-levels.reset",
+        "title": "Code Levels: Reset All Stats"
+      },
+      {
+        "command": "code-levels.showLevels",
+        "title": "Code Levels: Show Levels"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.84.0",
+    "@types/node": "18.x",
+    "glob": "^10.3.10",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.6"
+  }
+}
